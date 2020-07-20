@@ -1,0 +1,41 @@
+body {
+    min-height: 100vh;
+    display:grid;
+    justify-content:center;
+    align-content: center;
+}
+  
+.pokeball {
+width: 400px;
+height: 400px;
+border-radius: 50%;
+box-shadow: 0 0 0 6px;
+background: 
+  radial-gradient(closest-side circle at 50% 50%,white 18%,transparent 18%),
+  radial-gradient(closest-side circle at 50% 50%,gray 20%,transparent 20%),
+  radial-gradient(closest-side circle at 50% 50%,white 25%,transparent 25%),
+  radial-gradient(closest-side circle at 50% 50%,black 35%,transparent 35%),
+  linear-gradient(180deg, 
+      rgba(0,0,0,0) 20% calc(50% - 10px), 
+      rgb(0,0,0) 20% calc(50% + 10px), 
+      rgba(0,0,0,0) 20% calc(50%)
+  ),
+  linear-gradient(red 50%,white 50%);
+animation: animate 1s linear infinite;
+}
+  
+@keyframes animate {
+  50% {
+    background: 
+    radial-gradient(closest-side circle at 50% 50%,red 18%,transparent 18%),
+    radial-gradient(closest-side circle at 50% 50%,black 20%,transparent 20%),
+    radial-gradient(closest-side circle at 50% 50%,white 25%,transparent 25%),
+    radial-gradient(closest-side circle at 50% 50%,black 35%,transparent 35%),
+    linear-gradient(180deg, 
+        rgba(0,0,0,0) 20% calc(50% - 10px), 
+        rgb(0,0,0) 20% calc(50% + 10px), 
+        rgba(0,0,0,0) 20% calc(50%)
+    ),
+    linear-gradient(red 50%,white 50%);
+  }
+}
